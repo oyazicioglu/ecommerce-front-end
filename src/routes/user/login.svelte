@@ -31,6 +31,8 @@
         e.preventDefault();
         const fetchResult = await fetch('http://localhost:8080/api/user/login', {
             method: 'POST',
+            credentials: 'include',
+
             body: JSON.stringify({
                 Email: email,
                 Password: password,
@@ -42,9 +44,10 @@
         errors = result.Error;
 
         if (!result.Error) {
-            $session = result.Data;
+            $session = { User: result.Data };
             console.log($session);
-            goto('/');
+            loading = false;
+            goto('/App');
         }
 
         loading = false;

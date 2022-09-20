@@ -9,6 +9,7 @@
         "start": "node __sapper__/build"
     },
     "dependencies": {
+        "axios": "^0.27.2",
         "compression": "^1.7.1",
         "cors": "^2.8.5",
         "express": "^4.18.1",
@@ -29,6 +30,7 @@
         "carbon-components-svelte": "^0.67.4",
         "carbon-icons-svelte": "^11.2.0",
         "carbon-preprocess-svelte": "^0.9.1",
+        "cross-fetch": "^3.1.5",
         "postcss": "^8.4.14",
         "rollup": "^2.3.4",
         "rollup-plugin-svelte": "^7.0.0",
